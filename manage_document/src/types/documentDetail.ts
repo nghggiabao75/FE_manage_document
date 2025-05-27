@@ -1,6 +1,6 @@
 export interface DocumentDetail {
-  id: string;
-  accountCode: string;
+  accountCode: number;
+  documentNumber: number;
   description: string;
   amount: number;
   transactionType: string;
