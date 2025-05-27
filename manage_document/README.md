@@ -1,12 +1,59 @@
-# React + Vite
+# Document Management System
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A React-based document management system that allows users to manage documents and their details efficiently.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+### Document Management
+- View list of documents
+- Create new documents
+- Edit existing documents
+- Delete documents
+- View document details
 
-## Expanding the ESLint configuration
+### Document Detail Management
+- View list of document details
+- Create new document details
+- Edit existing document details
+- Delete document details
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Tech Stack
+
+- React
+- TypeScript
+- Axios for API calls
+- React Router for navigation
+- Tailwind CSS for styling
+
+## Getting Started
+
+1. Clone the repository:
+```bash
+git clone [repository-url]
+```
+
+2. Install dependencies:
+```bash
+npm install
+```
+
+3. Start the development server:
+```bash
+npm run dev
+```
+
+## API Integration
+
+The application integrates with a REST API for data management. API endpoints are configured in `src/config/api.ts`.
+
+### Document Endpoints
+- GET `/api/documents` - Get all documents
+- POST `/api/documents` - Create new document
+- PUT `/api/documents/{id}` - Update document
+- DELETE `/api/documents/{id}` - Delete document
+
+### Document Detail Endpoints
+- GET `/api/document-details?documentNumber={number}` - Get document details
+- POST `/api/document-details` - Create new document detail
+- PUT `/api/document-details/{id}` - Update document detail
+- DELETE `/api/document-details/{id}` - Delete document detail
